@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caio Faria Gualberto — Software & Cloud Engineer</title>
+  <meta name="description" content="Caio Faria Gualberto — Software e Cloud Engineer. C#, Python, Go, Azure e AWS. Do problema à entrega." />
+  <meta name="color-scheme" content="light dark" />
+
+  <meta property="og:title" content="Caio Faria Gualberto — Software & Cloud Engineer" />
+  <meta property="og:description" content="Da lógica à nuvem, na escala que o negócio precisar." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="./assets/Logo_Aba.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ HUD / instrumento (assinatura) ============ -->
+  <div class="hud">
+    <div class="hud__corner hud__corner--tl">
+      <span class="mono monogram">Caio</span>
+      <span class="mono hud__label" data-i18n="role">SOFTWARE & CLOUD ENGINEER</span>
+    </div>
+
+    <div class="hud__corner hud__corner--tr controls">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang__btn is-active" data-lang="pt">PT</button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button type="button" class="lang__btn" data-lang="en">EN</button>
+      </div>
+      <span class="controls__divider" aria-hidden="true"></span>
+      <button type="button" class="theme-toggle" id="theme-toggle"
+              aria-label="Alternar tema claro/escuro" title="Tema claro / escuro">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+
+    <div class="hud__corner hud__corner--bl">
+      <span class="mono hud__label">UTC <span id="utc-clock">--:--:--</span></span>
+      <span class="mono hud__label" id="build-tag">build · caio@2026</span>
+    </div>
+  </div>
+
+  <!-- rail de progresso -->
+  <nav class="rail" aria-label="Navegação de seções">
+    <ul class="rail__list">
+      <li><a href="#hero" class="rail__dot is-active" data-label="início"><span></span></a></li>
+      <li><a href="#sobre" class="rail__dot" data-label="sobre"><span></span></a></li>
+      <li><a href="#stack" class="rail__dot" data-label="stack"><span></span></a></li>
+      <li><a href="#especificacoes" class="rail__dot" data-label="especificações"><span></span></a></li>
+      <li><a href="#trajetoria" class="rail__dot" data-label="trajetória"><span></span></a></li>
+      <li><a href="#global" class="rail__dot" data-label="internacional"><span></span></a></li>
+      <li><a href="#trabalho" class="rail__dot" data-label="trabalho"><span></span></a></li>
+      <li><a href="#contato" class="rail__dot" data-label="contato"><span></span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="mono eyebrow reveal" data-boot>
+            <span class="eyebrow__mark">◇</span> Caio Faria Gualberto
+          </p>
+          <h1 class="hero__title">
+            <span class="reveal" data-boot data-delay="1" data-i18n="hero.l1">Eu projeto sistemas —</span>
+            <span class="reveal" data-boot data-delay="2" data-i18n="hero.l2">da lógica à nuvem,</span>
+            <span class="reveal" data-boot data-delay="3" data-i18n="hero.l3">na escala que precisar.</span>
+          </h1>
+          <p class="hero__lede reveal" data-boot data-delay="4" data-i18n="hero.lede">
+            Software e cloud engineer. Da lógica que sustenta ao que aparece na
+            tela — <em>C#</em>, <em>Python</em>, <em>Go</em> e nuvem avançada em
+            <em>Azure</em> e <em>AWS</em>.
+          </p>
+          <div class="hero__actions reveal" data-boot data-delay="5">
+            <a href="#contato" class="btn btn--primary" data-i18n="cta.talk">Falar comigo</a>
+            <a href="#trabalho" class="btn btn--ghost" data-i18n="cta.work">Ver trabalho</a>
+          </div>
+        </div>
+
+        <!-- Retrato: troque assets/portrait.jpg pela sua foto (mesmo nome) -->
+        <figure class="portrait reveal" data-boot data-delay="3">
+          <img src="assets/Perfil.jpeg" alt="Caio Faria Gualberto"
+               class="portrait__img"
+               onerror="this.classList.add('is-missing')" />
+          <span class="portrait__ph mono" aria-hidden="true">sua<br>foto</span>
+          <figcaption class="mono portrait__cap">retrato</figcaption>
+        </figure>
+      </div>
+      <span class="hero__scroll mono" data-i18n="scroll" aria-hidden="true">rolar ↓</span>
+    </section>
+
+    <!-- ==================== SOBRE ==================== -->
+    <section id="sobre" class="section section--about">
+      <div class="wrap grid-2">
+        <div class="section__aside">
+          <span class="mono section__idx" data-i18n="idx.about">01 — sobre</span>
+        </div>
+        <div class="section__body">
+          <p class="prose reveal" data-i18n="about.p1">
+            Sou engenheiro de software e de nuvem, e vou onde o problema estiver.
+            Projeto e entrego de ponta a ponta — backend, cloud e frontend — e
+            <strong>assumo o resultado em produção.</strong>
+          </p>
+          <p class="prose prose--muted reveal" data-i18n="about.p2">
+            Gosto de sistemas que se sustentam sozinhos: bem pensados na base,
+            simples de operar, honestos sobre o que fazem. É esse o padrão que
+            eu levo para cada projeto.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STACK ==================== -->
+    <section id="stack" class="section section--stack">
+      <div class="wrap grid-2">
+        <div class="section__aside">
+          <span class="mono section__idx" data-i18n="idx.stack">02 — stack</span>
+          <h2 class="section__title" data-i18n="stack.title">O que eu levo<br />para a mesa</h2>
+        </div>
+        <div class="section__body">
+          <dl class="index">
+            <div class="index__row reveal">
+              <dt class="mono" data-i18n="stack.k1">Linguagens</dt>
+              <dd>C#<span class="sep">·</span>Python<span class="sep">·</span>Go</dd>
+            </div>
+            <div class="index__row reveal">
+              <dt class="mono" data-i18n="stack.k2">Nuvem</dt>
+              <dd data-i18n="stack.v2">Azure<span class="sep">·</span>AWS</dd>
+            </div>
+            <div class="index__row reveal">
+              <dt class="mono" data-i18n="stack.k3">Frontend</dt>
+              <dd>React<span class="sep">·</span>JavaScript</dd>
+            </div>
+            <div class="index__row reveal">
+              <dt class="mono" data-i18n="stack.k4">Abordagem</dt>
+              <dd data-i18n="stack.v4">Entrego ponta a ponta<span class="sep">·</span>e assumo o resultado</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ESPECIFICAÇÕES (seção própria, expansível) ==================== -->
+    <section id="especificacoes" class="section section--spec">
+      <div class="wrap">
+        <div class="spec__head reveal">
+          <span class="mono section__idx" data-i18n="idx.spec">03 — especificações</span>
+          <h2 class="section__title" data-i18n="spec.title">Minhas<br />especificações</h2>
+          <p class="prose--muted spec__intro" data-i18n="spec.intro">
+            O detalhe técnico completo — abra se quiser ver a fundo. 66
+            competências, do código à nuvem.
+          </p>
+          <button type="button" class="spec__toggle" id="specToggle"
+                  aria-expanded="false" aria-controls="specPanel">
+            <span class="spec__toggle-label" data-i18n="spec.toggle">Abrir especificações</span>
+            <span class="spec__chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="spec__panel" id="specPanel" role="region" aria-labelledby="specToggle">
+          <div class="spec__inner">
+            <div class="tech-grid">
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/csharp.svg" alt="C#" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Languages</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip chip--primary">C#</li>
+                  <li class="chip">Python</li>
+                  <li class="chip">Go</li>
+                  <li class="chip">SQL</li>
+                  <li class="chip">JavaScript</li>
+                  <li class="chip">TypeScript</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/dotnetcore.svg" alt=".NET" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Backend</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">.NET</li>
+                  <li class="chip">ASP.NET Core</li>
+                  <li class="chip">REST APIs</li>
+                  <li class="chip">Microservices</li>
+                  <li class="chip">Webhooks</li>
+                  <li class="chip">Payment Integrations</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/react.svg" alt="React" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Frontend</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">React</li>
+                  <li class="chip">Angular</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/postgresql.svg" alt="PostgreSQL" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Databases</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">PostgreSQL</li>
+                  <li class="chip">SQL Server</li>
+                  <li class="chip">Redis</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/kafka.svg" alt="Apache Kafka" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Messaging</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Apache Kafka</li>
+                  <li class="chip">RabbitMQ</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat tech-cat--wide">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/aws.svg" alt="AWS" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Cloud · AWS</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">ECS (Fargate)</li>
+                  <li class="chip">EC2</li>
+                  <li class="chip">ECR</li>
+                  <li class="chip">RDS</li>
+                  <li class="chip">S3</li>
+                  <li class="chip">SES</li>
+                  <li class="chip">SNS</li>
+                  <li class="chip">SQS</li>
+                  <li class="chip">ElastiCache (Redis)</li>
+                  <li class="chip">Secrets Manager</li>
+                  <li class="chip">ACM</li>
+                  <li class="chip">CloudWatch</li>
+                  <li class="chip">IAM</li>
+                  <li class="chip">VPC</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat tech-cat--wide">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/azure.svg" alt="Azure" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">Cloud · Azure</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Container Apps</li>
+                  <li class="chip">Container Apps Jobs</li>
+                  <li class="chip">Container Apps Environment</li>
+                  <li class="chip">ACR</li>
+                  <li class="chip">App Service</li>
+                  <li class="chip">Static Web Apps</li>
+                  <li class="chip">Database for PostgreSQL</li>
+                  <li class="chip">SQL Database</li>
+                  <li class="chip">Storage Account</li>
+                  <li class="chip">Blob Storage</li>
+                  <li class="chip">Queue Storage</li>
+                  <li class="chip">Communication Services</li>
+                  <li class="chip">Email Communication</li>
+                  <li class="chip">Log Analytics</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <img src="assets/icons/docker.svg" alt="Docker" class="brand" />
+                  </span>
+                  <h3 class="tech-cat__name mono">DevOps</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Docker</li>
+                  <li class="chip">Docker Compose</li>
+                  <li class="chip">Docker Volumes</li>
+                  <li class="chip">Dockerfiles</li>
+                  <li class="chip">Git</li>
+                  <li class="chip">GitHub</li>
+                  <li class="chip">GitHub Actions</li>
+                  <li class="chip">Azure DevOps Pipelines</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <svg class="generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-2h12v2"/></svg>
+                  </span>
+                  <h3 class="tech-cat__name mono">Architecture</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Clean Architecture</li>
+                  <li class="chip">Domain-Driven Design</li>
+                  <li class="chip">Event-Driven Architecture</li>
+                  <li class="chip">SOLID</li>
+                  <li class="chip">Design Patterns</li>
+                  <li class="chip">Distributed Systems</li>
+                  <li class="chip">Scalable Systems Design</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <svg class="generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
+                  </span>
+                  <h3 class="tech-cat__name mono">Payments</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Payment Gateway Integrations</li>
+                  <li class="chip">Webhooks</li>
+                  <li class="chip">Idempotency</li>
+                  <li class="chip">Subscription Lifecycle</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRAJETÓRIA (curva com nós, assinatura) ==================== -->
+    <section id="trajetoria" class="section section--path">
+      <div class="wrap">
+        <div class="path__head">
+          <span class="mono section__idx" data-i18n="idx.path">04 — trajetória</span>
+          <h2 class="section__title" data-i18n="path.title">Por onde<br />passei</h2>
+          <p class="prose--muted path__intro reveal" data-i18n="path.intro">
+            Duas empresas até aqui. Toque num ponto para abrir.
+          </p>
+        </div>
+
+        <!-- curva + nós (posicionados via JS ao longo do path) -->
+        <div class="curve reveal" id="curve">
+          <svg class="curve-svg" viewBox="0 0 1000 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path class="curve-path" id="curvePath"
+              d="M 40 150 C 150 150 210 70 380 70 C 560 70 640 175 800 175 C 890 175 930 150 960 140"
+              fill="none" />
+          </svg>
+          <div class="nodes" id="nodes"><!-- injetado via main.js --></div>
+        </div>
+
+        <!-- painel de detalhe (atualizado ao clicar num nó) -->
+        <div class="detail" id="detail" aria-live="polite">
+          <div class="detail__inner">
+            <p class="mono detail__when"></p>
+            <h3 class="detail__role"></h3>
+            <p class="mono detail__org"></p>
+            <p class="detail__text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ALCANCE INTERNACIONAL (faixa) ==================== -->
+    <section id="global" class="section section--global">
+      <div class="wrap global__grid">
+        <div class="global__intro reveal">
+          <span class="mono section__idx" data-i18n="global.eyebrow">◇ alcance internacional</span>
+          <h2 class="section__title" data-i18n="global.title">Colaboração<br />sem fronteiras.</h2>
+          <p class="prose--muted global__lede" data-i18n="global.lede">
+            Já trabalhei com times e clientes de vários países. Comunicação em
+            inglês faz parte do meu dia a dia.
+          </p>
+          <ul class="nations">
+            <li class="nation" data-i18n="global.nl_pl">Polônia</li>
+            <li class="nation" data-i18n="global.nl_ch">Suíça</li>
+            <li class="nation" data-i18n="global.nl_pt">Portugal</li>
+            <li class="nation" data-i18n="global.nl_us">Estados Unidos</li>
+            <li class="nation" data-i18n="global.nl_cn">China</li>
+            <li class="nation nation--main">
+              <span data-i18n="global.nl_nl">Países Baixos</span>
+              <span class="nation__tag mono" data-i18n="global.mainly">principalmente</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="global__lang reveal">
+          <div class="lang-card">
+            <div class="lang-card__head">
+              <span class="mono lang-card__label" data-i18n="global.langLabel">Inglês</span>
+              <span class="lang-card__level" data-i18n="global.langLevel">Fluente</span>
+            </div>
+            <p class="lang-card__note" data-i18n="global.langNote">
+              Comunicação profissional diária com clientes europeus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRABALHO (invertido + animação) ==================== -->
+    <section id="trabalho" class="section section--work">
+      <div class="wrap">
+        <div class="work__head">
+          <span class="mono section__idx section__idx--inv" data-i18n="idx.work">05 — trabalho</span>
+          <h2 class="section__title section__title--inv work__title" data-i18n="work.title">Trabalho<br />selecionado</h2>
+        </div>
+        <div class="work__grid">
+          <!-- Destaque: SMS Full Bot -->
+          <article class="card card--feature work-card">
+            <div class="card__lead">
+              <span class="mono card__meta" data-i18n="work.featEyebrow">projeto em destaque · solo</span>
+              <h3 class="card__title card__title--lg">SMS Full Bot</h3>
+              <p class="card__desc" data-i18n="work.featDesc">
+                Construí do zero, sozinho, e mantenho: bot de Telegram com backend
+                em Python, infraestrutura em AWS e design system próprio — feito
+                para operar em escala.
+              </p>
+              <div class="card__links mono">
+                <a href="https://t.me/smsfull_bot" target="_blank" rel="noopener" data-i18n="work.linkBot">Abrir bot ↗</a>
+                <a href="https://smsfullbot.com/" target="_blank" rel="noopener">Landing ↗</a>
+              </div>
+              <span class="mono card__tags">Python · AWS · Telegram</span>
+            </div>
+            <div class="card__metrics">
+              <div class="metric">
+                <span class="metric__num">300K<span class="metric__plus">+</span></span>
+                <span class="mono metric__label" data-i18n="work.m1">usuários na base</span>
+              </div>
+              <div class="metric">
+                <span class="metric__num">20K</span>
+                <span class="mono metric__label" data-i18n="work.m2">ativos simultâneos</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Polaris RX -->
+          <a class="card work-card card--link" href="https://app.polaris-rx.com/" target="_blank" rel="noopener">
+            <span class="mono card__meta" data-i18n="work.byline">construído &amp; mantido por mim</span>
+            <h3 class="card__title">Polaris RX</h3>
+            <p class="card__desc" data-i18n="work.polaris">
+              Construí do zero, sozinho, e mantenho — do backend à interface.
+            </p>
+            <span class="mono card__tags">Web app <span class="card__go">Ver ↗</span></span>
+          </a>
+
+          <!-- Aurum Guidance -->
+          <a class="card work-card card--link" href="https://app.aurum-guidance.com.br/" target="_blank" rel="noopener">
+            <span class="mono card__meta" data-i18n="work.byline">construído &amp; mantido por mim</span>
+            <h3 class="card__title">Aurum Guidance</h3>
+            <p class="card__desc" data-i18n="work.aurum">
+              Construí do zero, sozinho, e mantenho — foco em experiência e dados.
+            </p>
+            <span class="mono card__tags">Web app <span class="card__go">Ver ↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section id="contato" class="section section--contact">
+      <div class="wrap">
+        <span class="mono section__idx" data-i18n="idx.contact">06 — contato</span>
+        <h2 class="contact__title reveal" data-i18n="contact.title">Vamos construir<br />algo juntos?</h2>
+        <a href="mailto:caiogualbertodev@outlook.com" class="contact__email reveal">
+          caiogualbertodev@outlook.com
+        </a>
+        <ul class="contact__links mono reveal">
+          <!-- TODO: trocar '#' pelos seus links reais -->
+          <li><a href="https://www.linkedin.com/in/caio-faria-gualberto-50706019a/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/Caio26Gualberto" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner mono">
+      <span>© <span id="year">2026</span> Caio Faria Gualberto</span>
+      <span class="footer__coord" data-i18n="footer.coord">lat: sistema · long: entrega</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
