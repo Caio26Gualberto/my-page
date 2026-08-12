@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caio Faria Gualberto — Software & Cloud Engineer</title>
-  <meta name="description" content="Caio Faria Gualberto — Software e Cloud Engineer. C#, Python, Go, Azure e AWS. Do problema à entrega." />
+  <title>Caio Faria Gualberto — Senior Software & Cloud Engineer</title>
+  <meta name="description" content="Caio Faria Gualberto — Senior Software e Cloud Engineer. C#, Python, Go, Azure e AWS. Do problema à entrega." />
   <meta name="color-scheme" content="light dark" />
 
-  <meta property="og:title" content="Caio Faria Gualberto — Software & Cloud Engineer" />
+  <meta property="og:title" content="Caio Faria Gualberto — Senior Software & Cloud Engineer" />
   <meta property="og:description" content="Da lógica à nuvem, na escala que o negócio precisar." />
   <meta property="og:type" content="website" />
 
@@ -23,7 +23,7 @@
   <div class="hud">
     <div class="hud__corner hud__corner--tl">
       <span class="mono monogram">Caio</span>
-      <span class="mono hud__label" data-i18n="role">SOFTWARE & CLOUD ENGINEER</span>
+      <span class="mono hud__label" data-i18n="role">SENIOR SOFTWARE & CLOUD ENGINEER</span>
     </div>
 
     <div class="hud__corner hud__corner--tr controls">
@@ -74,9 +74,9 @@
             <span class="reveal" data-boot data-delay="3" data-i18n="hero.l3">na escala que precisar.</span>
           </h1>
           <p class="hero__lede reveal" data-boot data-delay="4" data-i18n="hero.lede">
-            Software e cloud engineer. Da lógica que sustenta ao que aparece na
-            tela — <em>C#</em>, <em>Python</em>, <em>Go</em> e nuvem avançada em
-            <em>Azure</em> e <em>AWS</em>.
+            Senior software e cloud engineer. Da lógica que sustenta ao que
+            aparece na tela — <em>C#</em>, <em>Python</em>, <em>Go</em> e nuvem
+            avançada em <em>Azure</em> e <em>AWS</em>.
           </p>
           <div class="hero__actions reveal" data-boot data-delay="5">
             <a href="#contato" class="btn btn--primary" data-i18n="cta.talk">Falar comigo</a>
@@ -104,7 +104,7 @@
         </div>
         <div class="section__body">
           <p class="prose reveal" data-i18n="about.p1">
-            Sou engenheiro de software e de nuvem, e vou onde o problema estiver.
+            Sou engenheiro sênior de software e de nuvem, e vou onde o problema estiver.
             Projeto e entrego de ponta a ponta — backend, cloud e frontend — e
             <strong>assumo o resultado em produção.</strong>
           </p>
@@ -154,7 +154,7 @@
           <span class="mono section__idx" data-i18n="idx.spec">03 — especificações</span>
           <h2 class="section__title" data-i18n="spec.title">Minhas<br />especificações</h2>
           <p class="prose--muted spec__intro" data-i18n="spec.intro">
-            O detalhe técnico completo — abra se quiser ver a fundo. 66
+            O detalhe técnico completo — abra se quiser ver a fundo. 72
             competências, do código à nuvem.
           </p>
           <button type="button" class="spec__toggle" id="specToggle"
@@ -183,6 +183,7 @@
                   <li class="chip">SQL</li>
                   <li class="chip">JavaScript</li>
                   <li class="chip">TypeScript</li>
+                  <li class="chip">Node.js</li>
                 </ul>
               </div>
 
@@ -196,6 +197,7 @@
                 <ul class="chips">
                   <li class="chip">.NET</li>
                   <li class="chip">ASP.NET Core</li>
+                  <li class="chip">Node.js (NestJS)</li>
                   <li class="chip">REST APIs</li>
                   <li class="chip">Microservices</li>
                   <li class="chip">Webhooks</li>
@@ -254,6 +256,9 @@
                   <li class="chip">ECS (Fargate)</li>
                   <li class="chip">EC2</li>
                   <li class="chip">ECR</li>
+                  <li class="chip">Lambda</li>
+                  <li class="chip">Amplify</li>
+                  <li class="chip">CodeBuild</li>
                   <li class="chip">RDS</li>
                   <li class="chip">S3</li>
                   <li class="chip">SES</li>
@@ -305,6 +310,7 @@
                   <li class="chip">Docker Compose</li>
                   <li class="chip">Docker Volumes</li>
                   <li class="chip">Dockerfiles</li>
+                  <li class="chip">Terraform</li>
                   <li class="chip">Git</li>
                   <li class="chip">GitHub</li>
                   <li class="chip">GitHub Actions</li>
@@ -442,7 +448,11 @@
                 <a href="https://t.me/smsfull_bot" target="_blank" rel="noopener" data-i18n="work.linkBot">Abrir bot ↗</a>
                 <a href="https://smsfullbot.com/" target="_blank" rel="noopener">Landing ↗</a>
               </div>
-              <span class="mono card__tags">Python · AWS · Telegram</span>
+              <button type="button" class="spec-open mono" data-project="smsfull">
+                <span data-i18n="work.specBtn">Ver especificação</span>
+                <span class="spec-open__arrow" aria-hidden="true">→</span>
+              </button>
+              <span class="mono card__tags">Python · .NET · Flutter · AWS</span>
             </div>
             <div class="card__metrics">
               <div class="metric">
@@ -502,6 +512,52 @@
       <span class="footer__coord" data-i18n="footer.coord">lat: sistema · long: entrega</span>
     </div>
   </footer>
+
+  <!-- ==================== ESPECIFICAÇÃO DE PROJETO (overlay) ==================== -->
+  <div class="proj" id="projOverlay" hidden>
+    <div class="proj__scrim" data-proj-close></div>
+    <div class="proj__panel" role="dialog" aria-modal="true" aria-labelledby="projTitle">
+      <header class="proj__head">
+        <div class="proj__id">
+          <span class="mono proj__eyebrow" id="projEyebrow"></span>
+          <h2 class="proj__title" id="projTitle"></h2>
+          <span class="mono proj__tags" id="projTags"></span>
+        </div>
+        <button type="button" class="proj__close" data-proj-close
+                aria-label="Fechar especificação" data-i18n-aria="proj.close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+
+      <div class="proj__body">
+        <section class="acc" data-acc>
+          <button type="button" class="acc__head" aria-expanded="false" aria-controls="projSummary">
+            <span class="mono acc__idx">01</span>
+            <span class="acc__title" data-i18n="proj.summaryTitle">Visão geral</span>
+            <span class="acc__chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="acc__panel" id="projSummary">
+            <div class="acc__inner doc" id="projSummaryBody"></div>
+          </div>
+        </section>
+
+        <section class="acc" data-acc>
+          <button type="button" class="acc__head" aria-expanded="false" aria-controls="projTechnical">
+            <span class="mono acc__idx">02</span>
+            <span class="acc__title" data-i18n="proj.technicalTitle">Especificação técnica</span>
+            <span class="acc__chevron" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="acc__panel" id="projTechnical">
+            <div class="acc__inner doc" id="projTechnicalBody"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
