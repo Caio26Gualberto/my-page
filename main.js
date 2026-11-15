@@ -33,9 +33,11 @@
       'stack.k3': 'Frontend',
       'stack.k4': 'Abordagem',
       'stack.v4': 'Entrego ponta a ponta<span class="sep">·</span>e assumo o resultado',
+      'stack.k5': 'Plataforma',
+      'stack.v5': 'CI/CD<span class="sep">·</span>Observabilidade<span class="sep">·</span>Tempo real',
       'idx.spec': '03 — especificações',
       'spec.title': 'Minhas<br>especificações',
-      'spec.intro': 'O detalhe técnico completo — abra se quiser ver a fundo. 83 competências, do código à nuvem.',
+      'spec.intro': 'O detalhe técnico completo — abra se quiser ver a fundo. 118 competências, do código à nuvem.',
       'spec.toggle': 'Abrir especificações',
       'idx.path': '04 — trajetória',
       'path.title': 'Por onde<br>passei',
@@ -49,12 +51,19 @@
       'work.m1': 'usuários na base',
       'work.m2': 'ativos simultâneos',
       'work.specBtn': 'Ver especificação',
-      'work.byline': 'construído & mantido por mim',
       'proj.summaryTitle': 'Visão geral',
       'proj.technicalTitle': 'Especificação técnica',
       'proj.close': 'Fechar especificação',
-      'work.polaris': 'Construí do zero, sozinho, e mantenho — do backend à interface.',
-      'work.aurum': 'Construí do zero, sozinho, e mantenho — foco em experiência e dados.',
+      'work.sbEyebrow': 'em produção · Europa · EUA · Austrália',
+      'work.sbDesc': 'Plataforma SaaS B2B de vendas e cotação para MSPs, em produção em três regiões, com clientes na Europa, nos Estados Unidos e na Austrália.',
+      'work.sbM2': 'ativos ao mesmo tempo',
+      'work.sbTags': 'SaaS B2B · 3 regiões',
+      'work.labEyebrow': '◇ laboratório · projetos autorais',
+      'work.labIntro': 'Sistemas que projetei e construí por conta própria — arquitetura de produção, deploy real e observabilidade de ponta a ponta.',
+      'work.labMetaAtalog': 'observabilidade · plataforma própria',
+      'work.labMetaOscord': 'tempo real · desktop',
+      'work.atalog': 'Plataforma de observabilidade própria — erros, logs, métricas p95/p99, traces, SLOs e alertas, com SDKs publicados.',
+      'work.oscord': 'Comunicação em tempo real — desktop em Electron, voz, câmera e transmissão de tela via WebRTC, com o serviço de mídia separado da API.',
       'global.eyebrow': '◇ alcance internacional',
       'global.title': 'Colaboração<br>sem fronteiras.',
       'global.lede': 'Já trabalhei com times e clientes de vários países. Comunicação em inglês faz parte do meu dia a dia.',
@@ -95,9 +104,11 @@
       'stack.k3': 'Frontend',
       'stack.k4': 'Approach',
       'stack.v4': 'End-to-end delivery<span class="sep">·</span>I own the outcome',
+      'stack.k5': 'Platform',
+      'stack.v5': 'CI/CD<span class="sep">·</span>Observability<span class="sep">·</span>Real time',
       'idx.spec': '03 — specs',
       'spec.title': 'My<br>specifications',
-      'spec.intro': 'The full technical detail — open it if you want to go deep. 83 skills, from code to cloud.',
+      'spec.intro': 'The full technical detail — open it if you want to go deep. 118 skills, from code to cloud.',
       'spec.toggle': 'Open specifications',
       'idx.path': '04 — path',
       'path.title': 'Where<br>I have been',
@@ -111,12 +122,19 @@
       'work.m1': 'users in the base',
       'work.m2': 'concurrent active',
       'work.specBtn': 'See specification',
-      'work.byline': 'built & maintained by me',
       'proj.summaryTitle': 'Overview',
       'proj.technicalTitle': 'Technical specification',
       'proj.close': 'Close specification',
-      'work.polaris': 'Built from scratch, solo, and maintained by me — backend to interface.',
-      'work.aurum': 'Built from scratch, solo, and maintained by me — focused on experience and data.',
+      'work.sbEyebrow': 'in production · Europe · US · Australia',
+      'work.sbDesc': 'A B2B SaaS sales and quoting platform for MSPs, running in production across three regions, with customers in Europe, the United States and Australia.',
+      'work.sbM2': 'active at the same time',
+      'work.sbTags': 'B2B SaaS · 3 regions',
+      'work.labEyebrow': '◇ lab · independent projects',
+      'work.labIntro': 'Systems I designed and built on my own — production architecture, real deployments and end-to-end observability.',
+      'work.labMetaAtalog': 'observability · own platform',
+      'work.labMetaOscord': 'real time · desktop',
+      'work.atalog': 'My own observability platform — errors, logs, p95/p99 metrics, traces, SLOs and alerts, with published SDKs.',
+      'work.oscord': 'Real-time communication — an Electron desktop app with voice, camera and screen sharing over WebRTC, with the media service split from the API.',
       'global.eyebrow': '◇ international reach',
       'global.title': 'Collaboration<br>without borders.',
       'global.lede': "I've worked with teams and clients from many countries. Communicating in English is part of my everyday work.",
@@ -382,6 +400,272 @@
 
 <h4>Method</h4>
 <p><strong>Spec-driven</strong> development on the new projects: every meaningful feature starts from a specification with expected behavior, errors and acceptance criteria, and architectural decisions are recorded as ADRs. The <em>why</em> behind each domain rule lives in living documentation versioned next to the code — that's what keeps the codebase predictable after years and two generations of stack.</p>`,
+      },
+    },
+
+    atalog: {
+      title: 'Atalog',
+      eyebrow: {
+        pt: 'laboratório · projeto autoral · arquitetura, código e infraestrutura',
+        en: 'lab · independent project · architecture, code and infrastructure',
+      },
+      tags: { pt: '.NET 10 · React 19 · PostgreSQL · AWS Lightsail', en: '.NET 10 · React 19 · PostgreSQL · AWS Lightsail' },
+      summary: {
+        pt: `
+<p class="doc__lede">Plataforma de observabilidade self-hosted com gestão de tarefas na mesma conta. Ela recebe erros, logs, métricas e traces das aplicações, mostra tudo em dashboards, dispara alertas e liga cada problema ao card de quem vai resolvê-lo.</p>
+
+<ul class="doc__stats">
+  <li>5 serviços</li>
+  <li>2 SDKs publicados</li>
+  <li>p50 · p95 · p99</li>
+  <li>24 ferramentas MCP</li>
+</ul>
+
+<h4>O que a plataforma faz</h4>
+<ul>
+  <li><strong>Erros</strong> agrupados por fingerprint, com contagem de usuários afetados e simbolização por source map.</li>
+  <li><strong>Logs</strong> estruturados com live tail.</li>
+  <li><strong>Métricas</strong> com rollup por minuto e histogramas em p50, p90, p95 e p99.</li>
+  <li><strong>Traces</strong> com mapa de serviços e latência por percentil.</li>
+  <li><strong>Dashboards</strong> montados com arrastar e redimensionar.</li>
+  <li><strong>Monitores</strong> que abrem incidentes e notificam por e-mail ou webhook assinado.</li>
+  <li><strong>SLOs</strong> com error budget e alerta de burn rate.</li>
+  <li>Uptime checks, rastreio de deploys e releases, e políticas de retenção.</li>
+</ul>
+
+<h4>Observabilidade ligada ao trabalho</h4>
+<p>O segundo produto da conta é um quadro de tarefas (kanban, backlog, sprints, automações). Um card pode ser vinculado a um erro: <strong>fechar o card resolve o erro</strong>, e se o erro voltar, o card é reaberto. O incidente e a tarefa contam a mesma história.</p>
+
+<h4>Em uso</h4>
+<p>O Atalog observa os meus próprios sistemas. O Oscord, por exemplo, manda erros, logs, métricas e traces para ele pelo SDK.</p>`,
+        en: `
+<p class="doc__lede">A self-hosted observability platform with task management in the same account. It takes in errors, logs, metrics and traces from applications, shows them on dashboards, fires alerts and links each problem to the card of whoever will fix it.</p>
+
+<ul class="doc__stats">
+  <li>5 services</li>
+  <li>2 published SDKs</li>
+  <li>p50 · p95 · p99</li>
+  <li>24 MCP tools</li>
+</ul>
+
+<h4>What the platform does</h4>
+<ul>
+  <li><strong>Errors</strong> grouped by fingerprint, with affected-user counts and source-map symbolication.</li>
+  <li><strong>Structured logs</strong> with live tail.</li>
+  <li><strong>Metrics</strong> with a per-minute rollup and histograms at p50, p90, p95 and p99.</li>
+  <li><strong>Traces</strong> with a service map and percentile latency.</li>
+  <li><strong>Dashboards</strong> built by dragging and resizing.</li>
+  <li><strong>Monitors</strong> that open incidents and notify by email or signed webhook.</li>
+  <li><strong>SLOs</strong> with error budgets and burn-rate alerts.</li>
+  <li>Uptime checks, deploy and release tracking, and retention policies.</li>
+</ul>
+
+<h4>Observability tied to the work</h4>
+<p>The account's second product is a task board (kanban, backlog, sprints, automations). A card can be linked to an error: <strong>closing the card resolves the error</strong>, and if the error comes back, the card reopens. The incident and the task tell the same story.</p>
+
+<h4>In use</h4>
+<p>Atalog watches my own systems. Oscord, for example, sends its errors, logs, metrics and traces to it through the SDK.</p>`,
+      },
+      technical: {
+        pt: `
+<p class="doc__lede">Cinco serviços em .NET 10 atrás do Caddy, um PostgreSQL dividido por módulo, três frontends em React 19 e SDKs para .NET e TypeScript.</p>
+
+<h4>Serviços</h4>
+<ul>
+  <li><strong>auth</strong>, <strong>board</strong>, <strong>monitor</strong>, <strong>ingest</strong> e <strong>mcp</strong>, em ASP.NET Core, atrás do Caddy com HTTPS automático.</li>
+  <li>Um único PostgreSQL com <strong>schema e usuário de banco próprios por módulo</strong> e nenhuma chave estrangeira entre schemas. Os módulos ficam isolados sem o custo de vários bancos.</li>
+  <li><strong>auth</strong> emite JWT ES256. Os outros serviços validam pela JWKS, sem consultar o auth a cada requisição.</li>
+  <li>SignalR serve <strong>só como sinal</strong> de que algo mudou. O dado em si vem sempre da API, então nenhuma tela fica com estado divergente.</li>
+</ul>
+
+<h4>Ingestão</h4>
+<ul>
+  <li>Os SDKs mandam lotes para <code>/v1/errors|logs|metrics|traces</code> com chave de projeto. O <strong>ingest</strong> responde 202, 429 com <code>Retry-After</code> ou 503, e o SDK respeita o recado.</li>
+  <li>O <strong>monitor</strong> agrupa, avalia alertas e dispara webhooks em jobs do Hangfire, fora do caminho da ingestão.</li>
+  <li>As tabelas de sinais são <strong>particionadas por dia</strong> no próprio Postgres, sem banco colunar. A retenção vira descartar uma partição.</li>
+  <li>Percentis saem de um <strong>rollup por minuto</strong> nas métricas e de <code>percentile_cont</code> nos traces.</li>
+</ul>
+
+<h4>SDKs que nunca derrubam o app</h4>
+<ul>
+  <li><code>Atalog.Sdk</code> no NuGet e <code>@atalog/sdk</code> no npm (browser, Node e Electron), ambos MIT.</li>
+  <li>Fila limitada, timeout de 3 s e descarte silencioso: se a plataforma cair, a aplicação observada segue igual.</li>
+  <li>Dados sensíveis são limpos <strong>duas vezes</strong>, no SDK e de novo no ingest, incluindo validação de Luhn para números de cartão.</li>
+  <li>Chaves de browser só valem nas origens permitidas. Uma CLI no pacote npm sobe source maps e marca deploys.</li>
+</ul>
+
+<h4>MCP</h4>
+<p>Um servidor MCP expõe 24 ferramentas de Monitor e Tasks para assistentes como Claude e Cursor. O <strong>auth faz o papel de servidor OAuth</strong>, com tela de consentimento e gestão de apps conectados.</p>
+
+<h4>Infraestrutura e entrega</h4>
+<ul>
+  <li>APIs em Docker Compose no <strong>AWS Lightsail</strong>, os três frontends no AWS Amplify, DNS e borda na Cloudflare.</li>
+  <li>GitHub Actions com <strong>CI filtrado por pasta</strong> (só roda o que mudou), imagem por serviço no GHCR e publicação do SDK no NuGet via <strong>OIDC trusted publishing</strong>, sem chave guardada.</li>
+</ul>`,
+        en: `
+<p class="doc__lede">Five .NET 10 services behind Caddy, one PostgreSQL split by module, three React 19 frontends and SDKs for .NET and TypeScript.</p>
+
+<h4>Services</h4>
+<ul>
+  <li><strong>auth</strong>, <strong>board</strong>, <strong>monitor</strong>, <strong>ingest</strong> and <strong>mcp</strong>, in ASP.NET Core, behind Caddy with automatic HTTPS.</li>
+  <li>A single PostgreSQL with <strong>its own schema and database user per module</strong> and no cross-schema foreign keys. Modules stay isolated without the cost of several databases.</li>
+  <li><strong>auth</strong> issues ES256 JWTs. The other services validate them through JWKS, without calling auth on every request.</li>
+  <li>SignalR is used <strong>only as a signal</strong> that something changed. The data itself always comes from the API, so no screen drifts out of sync.</li>
+</ul>
+
+<h4>Ingestion</h4>
+<ul>
+  <li>The SDKs send batches to <code>/v1/errors|logs|metrics|traces</code> with a project key. <strong>ingest</strong> replies 202, 429 with <code>Retry-After</code>, or 503, and the SDK honors the answer.</li>
+  <li><strong>monitor</strong> groups, evaluates alerts and fires webhooks in Hangfire jobs, off the ingestion path.</li>
+  <li>Signal tables are <strong>partitioned by day</strong> in Postgres itself, with no columnar database. Retention means dropping a partition.</li>
+  <li>Percentiles come from a <strong>per-minute rollup</strong> for metrics and from <code>percentile_cont</code> for traces.</li>
+</ul>
+
+<h4>SDKs that never crash the app</h4>
+<ul>
+  <li><code>Atalog.Sdk</code> on NuGet and <code>@atalog/sdk</code> on npm (browser, Node and Electron), both MIT.</li>
+  <li>Bounded queue, 3 s timeout and silent drop: if the platform goes down, the observed application carries on unchanged.</li>
+  <li>Sensitive data is scrubbed <strong>twice</strong>, in the SDK and again in ingest, including a Luhn check for card numbers.</li>
+  <li>Browser keys only work on allowed origins. A CLI in the npm package uploads source maps and marks deploys.</li>
+</ul>
+
+<h4>MCP</h4>
+<p>An MCP server exposes 24 Monitor and Tasks tools to assistants such as Claude and Cursor. <strong>auth acts as the OAuth server</strong>, with a consent screen and connected-app management.</p>
+
+<h4>Infrastructure and delivery</h4>
+<ul>
+  <li>APIs on Docker Compose on <strong>AWS Lightsail</strong>, the three frontends on AWS Amplify, DNS and edge on Cloudflare.</li>
+  <li>GitHub Actions with <strong>path-filtered CI</strong> (only what changed runs), one image per service on GHCR, and SDK publishing to NuGet through <strong>OIDC trusted publishing</strong>, with no stored key.</li>
+</ul>`,
+      },
+    },
+
+    oscord: {
+      title: 'Oscord',
+      eyebrow: {
+        pt: 'laboratório · projeto autoral · desktop, backend e mídia em tempo real',
+        en: 'lab · independent project · desktop, backend and real-time media',
+      },
+      tags: { pt: 'Electron · .NET 10 · Go · LiveKit · WebRTC', en: 'Electron · .NET 10 · Go · LiveKit · WebRTC' },
+      summary: {
+        pt: `
+<p class="doc__lede">App de comunicação privado, só por convite, para um grupo de amigos: servidores com cargos e permissões, canais de texto e de voz, câmera e transmissão de tela com áudio. Roda como app desktop em Electron e também no navegador.</p>
+
+<ul class="doc__stats">
+  <li>5 componentes</li>
+  <li>Desktop + Web</li>
+  <li>WebRTC via SFU</li>
+  <li>pt-BR · en-US</li>
+</ul>
+
+<h4>O que o app faz</h4>
+<ul>
+  <li>Cadastro por convite, sessões por dispositivo e recuperação de senha.</li>
+  <li>Servidores, canais, cargos e permissões, mensagens, DMs e estado de leitura.</li>
+  <li>Voz, câmera e <strong>transmissão de tela com áudio</strong>, com volume por usuário e supressão de ruído.</li>
+  <li><strong>Sala de voz por proximidade:</strong> um mapa 2D isométrico onde o volume cai com a distância e cada voz vem do lado em que a pessoa está.</li>
+  <li>Bots de música dentro dos canais de voz.</li>
+  <li>Páginas de administração para usuários e releases, temas e dois idiomas.</li>
+</ul>
+
+<h4>A decisão de arquitetura</h4>
+<p>A API <strong>nunca carrega mídia</strong>. Ela cuida de contas, servidores, mensagens e permissões, e só emite o token de acesso a cada sala. Áudio e vídeo vão direto por WebRTC para um serviço de mídia separado, em instância própria. Cada parte escala e cai sozinha: um pico de voz não afeta o chat, e um deploy da API não derruba uma chamada.</p>
+
+<h4>Entrega</h4>
+<p>Instaladores para Windows e macOS gerados no CI, com <strong>atualização automática</strong>. Erros, logs, métricas e traces vão para o Atalog, a minha plataforma de observabilidade.</p>`,
+        en: `
+<p class="doc__lede">A private, invite-only communication app for a group of friends: servers with roles and permissions, text and voice channels, camera and screen sharing with audio. It runs as an Electron desktop app and in the browser.</p>
+
+<ul class="doc__stats">
+  <li>5 components</li>
+  <li>Desktop + Web</li>
+  <li>WebRTC via SFU</li>
+  <li>pt-BR · en-US</li>
+</ul>
+
+<h4>What the app does</h4>
+<ul>
+  <li>Invite-only sign-up, per-device sessions and password recovery.</li>
+  <li>Servers, channels, roles and permissions, messages, DMs and read states.</li>
+  <li>Voice, camera and <strong>screen sharing with audio</strong>, with per-user volume and noise suppression.</li>
+  <li><strong>Proximity voice room:</strong> a 2D isometric map where volume falls off with distance and each voice comes from the side the person is on.</li>
+  <li>Music bots inside voice channels.</li>
+  <li>Admin pages for users and releases, themes and two languages.</li>
+</ul>
+
+<h4>The architecture call</h4>
+<p>The API <strong>never carries media</strong>. It handles accounts, servers, messages and permissions, and only issues the access token for each room. Audio and video go straight over WebRTC to a separate media service on its own instance. Each part scales and fails on its own: a voice spike doesn't touch chat, and an API deploy doesn't drop a call.</p>
+
+<h4>Delivery</h4>
+<p>Windows and macOS installers built in CI, with <strong>automatic updates</strong>. Errors, logs, metrics and traces go to Atalog, my own observability platform.</p>`,
+      },
+      technical: {
+        pt: `
+<p class="doc__lede">Cinco componentes: cliente desktop em Electron, portal web, API em .NET 10, serviço de mídia LiveKit e bot de música em Go, com tipos, traduções e tokens de design compartilhados entre os clientes.</p>
+
+<h4>Como as partes conversam</h4>
+<ul>
+  <li><strong>REST</strong> para comandos, com envelope único (<code>isSuccess</code>, <code>code</code>, <code>message</code>, <code>data</code>).</li>
+  <li><strong>SignalR</strong> sobre WebSocket para eventos em tempo real: mensagens, presença, estado de voz.</li>
+  <li><strong>WebRTC</strong> para mídia, via um SFU <strong>LiveKit</strong> self-hosted com TURN, atrás de um proxy L4 do Caddy. A API emite tokens LiveKit com escopo de sala e recebe os webhooks do LiveKit.</li>
+  <li>A API manda comandos ao bot por HTTP interno com segredo compartilhado, e o bot publica nas salas do LiveKit.</li>
+</ul>
+
+<h4>Componentes</h4>
+<ul>
+  <li><strong>API:</strong> ASP.NET Core em camadas (Api, Application, Domain, Infra.Data, IoC, Workers), EF Core + Npgsql sobre Postgres 17, Identity + JWT, Hangfire, HybridCache, S3 e SES.</li>
+  <li><strong>Desktop:</strong> Electron 44 + electron-vite, React 19, TypeScript, Tailwind v4 e Radix, livekit-client, electron-updater e supressão de ruído no próprio cliente.</li>
+  <li><strong>Captura de áudio nativa:</strong> um executável .NET enxuto que usa WASAPI process loopback para <strong>incluir ou excluir o áudio de um app específico</strong> na transmissão de tela.</li>
+  <li><strong>Bot de música em Go:</strong> livekit server-sdk-go e pion/webrtc, um actor por bot, ffmpeg convertendo para Opus em tempo real.</li>
+</ul>
+
+<h4>Problemas resolvidos</h4>
+<ul>
+  <li><strong>Áudio espacial:</strong> volume cheio até 1 tile e silêncio a partir de 4,5, mais pan estéreo pela posição. As posições trafegam pelo data channel do LiveKit em mensagens de até 256 bytes: lossy para movimento, reliable para interações.</li>
+  <li><strong>Bloqueio de IP de nuvem:</strong> o YouTube bloqueia IPs de datacenter. Quem pede a música baixa o áudio no desktop, pela conexão de casa, e sobe para um cache de 24 h na API. O bot só faz o streaming.</li>
+  <li><strong>Sessão segura:</strong> refresh token rotaciona dentro da sessão do dispositivo, e o reuso de um token antigo revoga a sessão inteira. Na web, o cookie é HttpOnly e SameSite=Strict, com header anti-CSRF e checagem de Origin.</li>
+</ul>
+
+<h4>Infraestrutura e entrega</h4>
+<ul>
+  <li>API, Postgres, bot e Caddy em Docker Compose no <strong>AWS Lightsail</strong>. LiveKit em instância própria. Portal no AWS Amplify.</li>
+  <li>Imagens no GHCR com deploy por GitHub Actions via SSH.</li>
+  <li>Instaladores NSIS (Windows) e DMG universal (macOS) gerados no CI e servidos por S3 + CloudFront, que também é a origem do auto-update.</li>
+  <li>O CI checa build, pacotes vulneráveis, gofmt, e strings e cores fixas no código.</li>
+</ul>`,
+        en: `
+<p class="doc__lede">Five components: an Electron desktop client, a web portal, a .NET 10 API, a LiveKit media service and a Go music bot, with types, translations and design tokens shared across the clients.</p>
+
+<h4>How the parts talk</h4>
+<ul>
+  <li><strong>REST</strong> for commands, with a single envelope (<code>isSuccess</code>, <code>code</code>, <code>message</code>, <code>data</code>).</li>
+  <li><strong>SignalR</strong> over WebSocket for real-time events: messages, presence, voice state.</li>
+  <li><strong>WebRTC</strong> for media, through a self-hosted <strong>LiveKit</strong> SFU with TURN, behind a Caddy L4 proxy. The API issues room-scoped LiveKit tokens and receives LiveKit's webhooks.</li>
+  <li>The API sends commands to the bot over internal HTTP with a shared secret, and the bot publishes into LiveKit rooms.</li>
+</ul>
+
+<h4>Components</h4>
+<ul>
+  <li><strong>API:</strong> layered ASP.NET Core (Api, Application, Domain, Infra.Data, IoC, Workers), EF Core + Npgsql on Postgres 17, Identity + JWT, Hangfire, HybridCache, S3 and SES.</li>
+  <li><strong>Desktop:</strong> Electron 44 + electron-vite, React 19, TypeScript, Tailwind v4 and Radix, livekit-client, electron-updater and client-side noise suppression.</li>
+  <li><strong>Native audio capture:</strong> a lean .NET executable using WASAPI process loopback to <strong>include or exclude a specific app's audio</strong> in a screen share.</li>
+  <li><strong>Go music bot:</strong> livekit server-sdk-go and pion/webrtc, one actor per bot, ffmpeg converting to Opus in real time.</li>
+</ul>
+
+<h4>Problems solved</h4>
+<ul>
+  <li><strong>Spatial audio:</strong> full volume up to 1 tile and silence from 4.5, plus stereo pan by position. Positions travel over LiveKit's data channel in messages of up to 256 bytes: lossy for movement, reliable for interactions.</li>
+  <li><strong>Cloud IP blocking:</strong> YouTube blocks datacenter IPs. Whoever requests the song downloads the audio on their desktop, over their home connection, and uploads it to a 24 h cache on the API. The bot only streams it.</li>
+  <li><strong>Secure sessions:</strong> the refresh token rotates within the device session, and reusing an old token revokes the whole session. On the web, the cookie is HttpOnly and SameSite=Strict, with an anti-CSRF header and Origin checks.</li>
+</ul>
+
+<h4>Infrastructure and delivery</h4>
+<ul>
+  <li>API, Postgres, bot and Caddy on Docker Compose on <strong>AWS Lightsail</strong>. LiveKit on its own instance. Portal on AWS Amplify.</li>
+  <li>Images on GHCR, deployed by GitHub Actions over SSH.</li>
+  <li>NSIS (Windows) and universal DMG (macOS) installers built in CI and served from S3 + CloudFront, which is also the auto-update source.</li>
+  <li>CI checks the build, vulnerable packages, gofmt, and hardcoded strings and colors.</li>
+</ul>`,
       },
     },
   };

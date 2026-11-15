@@ -142,6 +142,10 @@
               <dt class="mono" data-i18n="stack.k4">Abordagem</dt>
               <dd data-i18n="stack.v4">Entrego ponta a ponta<span class="sep">·</span>e assumo o resultado</dd>
             </div>
+            <div class="index__row reveal">
+              <dt class="mono" data-i18n="stack.k5">Plataforma</dt>
+              <dd data-i18n="stack.v5">CI/CD<span class="sep">·</span>Observabilidade<span class="sep">·</span>Tempo real</dd>
+            </div>
           </dl>
         </div>
       </div>
@@ -202,6 +206,8 @@
                   <li class="chip">Microservices</li>
                   <li class="chip">Webhooks</li>
                   <li class="chip">Payment Integrations</li>
+                  <li class="chip">Hangfire</li>
+                  <li class="chip">MCP Servers</li>
                 </ul>
               </div>
 
@@ -210,11 +216,16 @@
                   <span class="tech-cat__icon">
                     <img src="assets/icons/react.svg" alt="React" class="brand" />
                   </span>
-                  <h3 class="tech-cat__name mono">Frontend</h3>
+                  <h3 class="tech-cat__name mono">Frontend &amp; Desktop</h3>
                 </div>
                 <ul class="chips">
                   <li class="chip">React</li>
                   <li class="chip">Angular</li>
+                  <li class="chip">Electron</li>
+                  <li class="chip">Auto-update</li>
+                  <li class="chip">Vite</li>
+                  <li class="chip">Tailwind CSS</li>
+                  <li class="chip">shadcn/ui</li>
                 </ul>
               </div>
 
@@ -276,12 +287,14 @@
                 <ul class="chips">
                   <li class="chip">ECS (Fargate)</li>
                   <li class="chip">EC2</li>
+                  <li class="chip">Lightsail</li>
                   <li class="chip">ECR</li>
                   <li class="chip">Lambda</li>
                   <li class="chip">Amplify</li>
                   <li class="chip">CodeBuild</li>
                   <li class="chip">RDS</li>
                   <li class="chip">S3</li>
+                  <li class="chip">CloudFront</li>
                   <li class="chip">SES</li>
                   <li class="chip">SNS</li>
                   <li class="chip">SQS</li>
@@ -325,7 +338,7 @@
                   <span class="tech-cat__icon">
                     <img src="assets/icons/docker.svg" alt="Docker" class="brand" />
                   </span>
-                  <h3 class="tech-cat__name mono">DevOps</h3>
+                  <h3 class="tech-cat__name mono">DevOps &amp; CI/CD</h3>
                 </div>
                 <ul class="chips">
                   <li class="chip">Docker</li>
@@ -337,6 +350,54 @@
                   <li class="chip">GitHub</li>
                   <li class="chip">GitHub Actions</li>
                   <li class="chip">Azure DevOps Pipelines</li>
+                  <li class="chip">Branch Rulesets</li>
+                  <li class="chip">Required Checks &amp; Reviews</li>
+                  <li class="chip">CodeRabbit (AI Code Review)</li>
+                  <li class="chip">Path-filtered CI</li>
+                  <li class="chip">GHCR</li>
+                  <li class="chip">OIDC Trusted Publishing</li>
+                  <li class="chip">Caddy</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <svg class="generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></svg>
+                  </span>
+                  <h3 class="tech-cat__name mono">Observability</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">Metrics</li>
+                  <li class="chip">Structured Logs</li>
+                  <li class="chip">Error Tracking</li>
+                  <li class="chip">Distributed Tracing</li>
+                  <li class="chip">Percentiles (p50 · p95 · p99)</li>
+                  <li class="chip">Dashboards</li>
+                  <li class="chip">Alerting</li>
+                  <li class="chip">SLOs &amp; Error Budgets</li>
+                  <li class="chip">Uptime Monitoring</li>
+                  <li class="chip">Source Maps</li>
+                  <li class="chip">SDK Design</li>
+                </ul>
+              </div>
+
+              <div class="tech-cat">
+                <div class="tech-cat__head">
+                  <span class="tech-cat__icon">
+                    <svg class="generic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>
+                  </span>
+                  <h3 class="tech-cat__name mono">Realtime &amp; Media</h3>
+                </div>
+                <ul class="chips">
+                  <li class="chip">WebRTC</li>
+                  <li class="chip">LiveKit (SFU)</li>
+                  <li class="chip">TURN</li>
+                  <li class="chip">SignalR</li>
+                  <li class="chip">WebSockets</li>
+                  <li class="chip">Screen Share</li>
+                  <li class="chip">Opus / ffmpeg</li>
+                  <li class="chip">Spatial Audio</li>
                 </ul>
               </div>
 
@@ -488,25 +549,66 @@
             </div>
           </article>
 
-          <!-- Polaris RX -->
-          <a class="card work-card card--link" href="https://app.polaris-rx.com/" target="_blank" rel="noopener">
-            <span class="mono card__meta" data-i18n="work.byline">construído &amp; mantido por mim</span>
-            <h3 class="card__title">Polaris RX</h3>
-            <p class="card__desc" data-i18n="work.polaris">
-              Construí do zero, sozinho, e mantenho — do backend à interface.
-            </p>
-            <span class="mono card__tags">Web app <span class="card__go">Ver ↗</span></span>
-          </a>
+          <!-- Destaque: Salesbuildr -->
+          <article class="card card--feature work-card">
+            <div class="card__lead">
+              <span class="mono card__meta" data-i18n="work.sbEyebrow">em produção · Europa · EUA · Austrália</span>
+              <h3 class="card__title card__title--lg">Salesbuildr</h3>
+              <p class="card__desc" data-i18n="work.sbDesc">
+                Plataforma SaaS B2B de vendas e cotação para MSPs, em produção em
+                três regiões, com clientes na Europa, nos Estados Unidos e na Austrália.
+              </p>
+              <span class="mono card__tags" data-i18n="work.sbTags">SaaS B2B · 3 regiões</span>
+            </div>
+            <div class="card__metrics">
+              <div class="metric">
+                <span class="metric__num">19K</span>
+                <span class="mono metric__label" data-i18n="work.m1">usuários na base</span>
+              </div>
+              <div class="metric">
+                <span class="metric__num">250</span>
+                <span class="mono metric__label" data-i18n="work.sbM2">ativos ao mesmo tempo</span>
+              </div>
+            </div>
+          </article>
+        </div>
 
-          <!-- Aurum Guidance -->
-          <a class="card work-card card--link" href="https://app.aurum-guidance.com.br/" target="_blank" rel="noopener">
-            <span class="mono card__meta" data-i18n="work.byline">construído &amp; mantido por mim</span>
-            <h3 class="card__title">Aurum Guidance</h3>
-            <p class="card__desc" data-i18n="work.aurum">
-              Construí do zero, sozinho, e mantenho — foco em experiência e dados.
+        <!-- Laboratório: projetos autorais -->
+        <div class="work__lab">
+          <span class="mono section__idx section__idx--inv" data-i18n="work.labEyebrow">◇ laboratório · projetos autorais</span>
+          <p class="work__lab-intro" data-i18n="work.labIntro">
+            Sistemas que projetei e construí por conta própria — arquitetura de
+            produção, deploy real e observabilidade de ponta a ponta.
+          </p>
+        </div>
+        <div class="work__grid">
+          <article class="card work-card">
+            <span class="mono card__meta" data-i18n="work.labMetaAtalog">observabilidade · plataforma própria</span>
+            <h3 class="card__title">Atalog</h3>
+            <p class="card__desc" data-i18n="work.atalog">
+              Plataforma de observabilidade própria — erros, logs, métricas
+              p95/p99, traces, SLOs e alertas, com SDKs publicados.
             </p>
-            <span class="mono card__tags">Web app <span class="card__go">Ver ↗</span></span>
-          </a>
+            <button type="button" class="spec-open mono" data-project="atalog">
+              <span data-i18n="work.specBtn">Ver especificação</span>
+              <span class="spec-open__arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="mono card__tags">.NET 10 · React · Postgres · Lightsail</span>
+          </article>
+
+          <article class="card work-card">
+            <span class="mono card__meta" data-i18n="work.labMetaOscord">tempo real · desktop</span>
+            <h3 class="card__title">Oscord</h3>
+            <p class="card__desc" data-i18n="work.oscord">
+              Comunicação em tempo real — desktop em Electron, voz, câmera e
+              transmissão de tela via WebRTC, com o serviço de mídia separado da API.
+            </p>
+            <button type="button" class="spec-open mono" data-project="oscord">
+              <span data-i18n="work.specBtn">Ver especificação</span>
+              <span class="spec-open__arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="mono card__tags">Electron · .NET · Go · LiveKit · WebRTC</span>
+          </article>
         </div>
       </div>
     </section>
